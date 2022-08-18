@@ -1,4 +1,3 @@
-import os
 import random
 from typing import Dict
 import streamlit as st
@@ -9,11 +8,6 @@ MY_MAX_SP = 100
 ENEMY_MAX_SP = 500
 KICK_SUCCESS_RATE = 70
 SAN_RATE = 60
-
-is_reset = st.sidebar.button("Reset")
-if is_reset:
-    for k in st.session_state:
-        del st.session_state[k]
 
 def throw_dice(x: int, y: int) -> int:
     a = [random.randint(1, y) for _ in range(x)]
